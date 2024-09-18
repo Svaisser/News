@@ -1,0 +1,59 @@
+@media (max-width: 800px) {
+    :root {
+        --font-family: 'Archivo', sans-serif;
+        --h1: 800 18px/100% var(--font-family);
+        --h2: 800 14px/140% var(--font-family);
+        --h3: 800 12px/140% var(--font-family);
+        --text-span: 600 12px/145% var(--font-family);
+        --text: 400 14px/160% var(--font-family);
+        --text-sm: 400 12px/160% var(--font-family);
+    }
+
+    main {
+        margin-block: 32px;
+        row-gap: 60px;
+        column-gap: 16px;
+    }
+
+    #weakly{
+        &>div {
+            grid-template-columns: repeat(2, 300px);
+        }
+        img {
+            height: 136px;
+        }
+    
+    }
+
+    .grid-featured {
+        grid-auto-flow: row;
+    }
+
+
+    #secondary{
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+   
+    #weakly{
+        &>div {
+            grid-template-columns: repeat(1, 400px);
+        }
+        img {
+            height: max-content;
+        }
+    
+    }
+
+    #secondary{
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 6px;
+    }
+    
+    #ai p{
+        content: url(#);
+    }
+}
